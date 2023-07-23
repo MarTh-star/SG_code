@@ -1,4 +1,4 @@
-# Swissgrid coding challenge
+# SG code
 
 ## Project description
 This project is able to take parameters in order to collect information from a table in the database.

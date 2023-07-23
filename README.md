@@ -19,11 +19,11 @@ One of the requirements of the challenge was scalability but this was not someth
 ## How to run the project
 1. Clone repository
 2. Run docker compose up --build in the terminal
-3. Go to localhost:8000/docs, instructions 4-6 are all done on this page
-4. Create table using the /create_table post request and enter in a name for the table as a paramter
-5. Input data into table that you created using /input_test_data and enter the table name as a parameter
+3. Go to _localhost:8000/docs_, instructions 4-6 are all done on this page
+4. Create table using the **/create_table** post request and enter in a name for the table as a paramter
+5. Input data into table that you created using **/input_test_data** and enter the table name as a parameter
     -The inquiry will run for a long time but doesn't have to be repeated after the first build
-6. Query data using /data or /get_top get requests. /get_top uses the table name and a number limiter as parameters. /data has several paramters that is explained below.
+6. Query data using **/data** or **/get_top** get requests. **/get_top** uses the table name and a number limiter as parameters. **/data** has several paramters that is explained below.
 
 ### Query parameters for testing api_queries /data
 In order to get data

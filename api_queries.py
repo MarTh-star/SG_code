@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 import to_db
 import create_table
-from connect import sql_execute
+from connect import sql_execute, sql_execute_and_fetch
 from csv_to_df import prepare_dataframe
 
 app = FastAPI()
@@ -22,7 +22,7 @@ def get_data(table_name, start_time, end_time, interval_minutes: int):
             AND EXTRACT(EPOCH FROM datum_zeit) % {interval_seconds} = 0;
             '''
    
-    return sql_execute(query)
+    return sql_execute_and_fetch(query)
 
 @app.post("/input_test_data")
 def input_test_data(table_name):
@@ -42,4 +42,4 @@ def get_top(table_name, number=10):
             LIMIT {number};
             '''
     
-    return sql_execute(query)
+    return sql_execute_and_fetch(query)

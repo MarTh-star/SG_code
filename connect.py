@@ -20,8 +20,7 @@ def db_connect():
     
     return con
 
-
-def sql_execute(query):
+def sql_execute_and_fetch(query):
     con = db_connect()
     #create cursor to use
     cursor = con.cursor()
@@ -34,3 +33,16 @@ def sql_execute(query):
     #close connection
     con.close()
     return result
+
+def sql_execute(query):
+    con = db_connect()
+    #create cursor to use
+    cursor = con.cursor()
+    # Execute query with provided parameters
+    cursor.execute(query)
+    con.commit()
+    #close cursor
+    cursor.close()
+    #close connection
+    con.close()
+    return True

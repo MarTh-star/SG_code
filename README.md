@@ -17,11 +17,16 @@ The code could do with a lot of improvements that have not been implemented beca
 One of the requirements of the challenge was scalability but this was not something that I had time to implement in the given time frame. Given enough time I would have liked to work on this more in order to really create an application that could easily scale up and down.
 
 ## How to run the project
-
+1. Clone repository
+2. Run docker compose up --build
+3. Go to localhost:8000/docs
+4. Create table
+5. Insert data into table that you just created (will take a long time)
+6. Query data
 
 ### Query parameters for testing api_queries get_data
 In order to get data
-table_name = sollfrequenz (string)
-start_time = YYYY-MM-DDTHH:MM:SS (string)
-end_time = YYYY-MM-DDTHH:MM:SS (string)
-interval_minutes = integer
+- ```table_name``` = the name that you chose in step 4 (string)
+- ```start_time``` = YYYY-MM-DDTHH:MM:SS (string)
+- ```end_time``` = YYYY-MM-DDTHH:MM:SS (string)
+- ```interval_minutes``` = integer

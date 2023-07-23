@@ -5,7 +5,7 @@ This project is able to take parameters in order to collect information from a t
 Furthermore it's possible to create a new table and insert information into the table.
 There are two get commands, one will get an interval of date and times from the chosen table as chosen by the user. The other one will simply collect the top values from the database, limited by user input but with a default input of 10.
 
-## Technologies used
+## Skills used
 This project uses FastAPI to create a quick API Framework in order to query the database that was created using psycopg2 and is also what connects the python project with the PostgreSQL database.
 
 ## Challenges
@@ -18,13 +18,14 @@ One of the requirements of the challenge was scalability but this was not someth
 
 ## How to run the project
 1. Clone repository
-2. Run docker compose up --build
-3. Go to localhost:8000/docs
-4. Create table
-5. Insert data into table that you just created (will take a long time)
-6. Query data
+2. Run docker compose up --build in the terminal
+3. Go to localhost:8000/docs, instructions 4-6 are all done on this page
+4. Create table using the /create_table post request and enter in a name for the table as a paramter
+5. Input data into table that you created using /input_test_data and enter the table name as a parameter
+    -The inquiry will run for a long time but doesn't have to be repeated after the first build
+6. Query data using /data or /get_top get requests. /get_top uses the table name and a number limiter as parameters. /data has several paramters that is explained below.
 
-### Query parameters for testing api_queries get_data
+### Query parameters for testing api_queries /data
 In order to get data
 - ```table_name``` = the name that you chose in step 4 (string)
 - ```start_time``` = YYYY-MM-DDTHH:MM:SS (string)

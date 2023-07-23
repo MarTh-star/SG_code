@@ -18,7 +18,7 @@ One of the requirements of the challenge was scalability but this was not someth
 
 ## How to run the project
 1. Clone repository
-2. Run docker compose up --build in the terminal
+2. Run ```docker compose up --build``` in the terminal
 3. Go to _localhost:8000/docs_, instructions 4-6 are all done on this page
 4. Create table using the **/create_table** post request and enter in a name for the table as a paramter
 5. Input data into table that you created using **/input_test_data** and enter the table name as a parameter

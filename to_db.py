@@ -7,7 +7,7 @@ def remove_substring_from_start(long_string):
     return result
 
 #Inserts rows of a dataframe into table
-def insert_data_into_database(df_data, table_name):
+def insert_data_into_database(df_data, table_name = 'sollfrequenz'):
     for row in df_data.itertuples():
         date = remove_substring_from_start(row.Datum_Zeit)
         # print(row)

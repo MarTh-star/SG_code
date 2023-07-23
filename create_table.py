@@ -1,6 +1,6 @@
 from connect import sql_execute
 
-def create_table(table_name):
+def create_table(table_name = 'sollfrequenz'):
     # build query
     query =   f'''
 		CREATE TABLE {table_name} (
